@@ -1,0 +1,43 @@
+@import "../values";
+
+.component__close-component {
+    $animationTime: 0.8s;
+    fill: white;
+
+    rect {
+        transform-origin: 50%;
+        transform: rotate(0);
+        transition: transform 1.3s ease;
+    }
+
+    rect:nth-child(2n+1) {
+        animation: animation1 $animationTime ease;
+        transform: rotate(45deg);
+    }
+
+    rect:nth-child(2n+2) {
+        animation: animation2 $animationTime ease;
+        transform: rotate(-45deg);
+    }
+
+    @keyframes animation1 {
+        from {
+            transform: translateY(0) translateX(5px) rotate(0);
+        }
+
+        40% {
+            transform: translateY(-10px) translateX(5px) rotate(0);
+        }
+    }
+
+    @keyframes animation2 {
+
+        10% {
+            transform: translateY(0) translateX(5px) rotate(0);
+        }
+
+        50% {
+            transform: translateY(5px) translateX(5px) rotate(0);
+        }
+    }
+}

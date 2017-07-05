@@ -1,0 +1,66 @@
+@import "../values";
+
+.component__home.screen__full-screen {
+    background: $colorPrimary;
+
+    .home__header {
+        background-color: #efefef;
+        background: linear-gradient(to bottom, rgba(18, 18, 18, 0.8) 0, rgba(24, 24, 24, 0.7) 100%), url('/assets/cafe-984275_1920 2.jpg');
+        background-size: cover;
+        background-position: left 0 bottom 0;
+        color: rgba(255, 255, 255, 0.8);
+        text-align: right;
+        padding: 50px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+
+        .parallax__content--banner {
+            flex: 1;
+
+            h1 {
+                letter-spacing: 2px;
+                font-weight: 700;
+                font-size: 4rem;
+                font-family: $cursiveFont;
+            }
+        }
+
+        .screen__wrapper {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-flow: column;
+            justify-content: center;
+            max-width: 900px;
+            padding: 0 40px;
+            color: #FFF;
+            height: auto;
+
+            .home__about-me {
+                margin-top: 40px;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .home__header {
+            padding: 20px 10px;
+        }
+
+        .screen__wrapper {
+            margin-top: 0;
+
+            .home__about-me {
+                margin: 20px 0;
+            }
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        .home__header {
+            height: 130vh;
+        }
+    }
+}

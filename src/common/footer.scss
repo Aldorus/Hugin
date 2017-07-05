@@ -1,0 +1,84 @@
+@import "../values";
+
+.component__footer.screen__full-screen {
+    position: relative;
+    background: $colorThird;
+    background: linear-gradient(to bottom, rgba(18, 18, 18, 0.8) 0, rgba(24, 24, 24, 0.7) 100%), url('/assets/1.jpg');
+    background-position: bottom;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+
+    .sign-left {
+        position: absolute;
+        top: 50%;
+        left: -69px;
+        display: inline-block;
+        transform: rotate(90deg);
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .fa-caret-left {
+        font-size: 2.5rem;
+        position: relative;
+        top: 8px;
+        margin-top: -9px;
+    }
+
+    img {
+        filter: invert(100%);
+        transform: rotate(-90deg);
+        width: 100px;
+        float: left;
+        position: relative;
+        top: -10px;
+    }
+
+    .footer__credit {
+        position: absolute;
+        bottom: 5px;
+        left: 20px;
+        font-size: 0.8rem;
+    }
+
+    .footer__tips {
+        height: 100%;
+        width: 80%;
+        display: flex;
+        margin-left: 30px;
+        padding-bottom: 30px;
+        color: #FFF;
+
+        span {
+            margin-left: 20px;
+            position: relative;
+            top: 30px;
+        }
+    }
+
+    .wrapper__fixed {
+        display: flex;
+        align-items: flex-end;
+        position: fixed;
+        top: 100px;
+        z-index: 0;
+        min-height: calc(100vh - 100px);
+    }
+
+    @media screen and (max-width: 768px) {
+        img {
+            display: none;
+        }
+
+        .wrapper__fixed {
+            top: 50px;
+        }
+
+        .footer__tips {
+
+        }
+    }
+}

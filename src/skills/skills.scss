@@ -1,0 +1,236 @@
+@import "../values";
+
+.component__skills {
+    $marginTop: 0px;
+    $marginBottom: 40px;
+    $marginLeft: 250px;
+    $marginLeftTablet: 120px;
+    $widthBar: 6%;
+
+    height: 60vh;
+    min-height: 600px;
+    flex-direction: column;
+    padding-top: 30px;
+
+    .screen__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .screen__inner-wrapper {
+        flex: 1;
+        width: 100%;
+        position: relative;
+    }
+
+    .skill__chart {
+        position: absolute;
+        top: 0;
+        left: $marginLeft;
+        bottom: $marginBottom;
+        right: 10px;
+        z-index: 1;
+
+        &:not(.viewed) .skill__chart-element .fill {
+            height: 0 !important;
+            -webkit-transition: all .8s ease;
+            transition: all .8s ease
+        }
+
+        .skill__chart-element {
+            float: left;
+            margin: 0 .5%;
+            height: 100%;
+            position: relative;
+            width: $widthBar;
+        }
+
+        .fill {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            -webkit-transition: all .5s ease;
+            transition: all .5s ease;
+            border-radius: 5px 5px 0 0;
+
+            &.colorFront {
+                background: $colorFront;
+            }
+
+            &.colorMobile {
+                background: $colorMobile;
+            }
+
+            &.colorBackend {
+                background: $colorBackend;
+            }
+
+            &.colorDev {
+                background: $colorDev;
+            }
+        }
+
+        .text {
+            -webkit-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+            -webkit-transform-origin: 50%;
+            -ms-transform-origin: 50%;
+            transform-origin: 50%;
+            width: 100%;
+            position: absolute;
+            bottom: 10%;
+            text-align: left;
+            font-size: 2.3vmin;
+            color: #fff;
+            white-space: nowrap
+        }
+    }
+
+    .grid {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: $marginBottom;
+        width: 100%;
+        transition: all 0.5s ease;
+        z-index: 0;
+        opacity: 1;
+
+        &:not(.viewed) {
+            opacity: 0;
+            width: 0;
+        }
+
+        div {
+            position: absolute;
+            border-top: 1px solid #797c7b;
+            width: 100%;
+            color: #797c7b;
+        }
+    }
+
+    .grid .awesome {
+        top: 0;
+    }
+
+    .grid .excellent {
+        top: 20%;
+    }
+
+    .grid .great {
+        top: 40%;
+    }
+
+    .grid .not-bad {
+        top: 60%;
+    }
+
+    .grid .very-sad {
+        top: 80%;
+    }
+
+    .grid .none {
+        top: calc(100% - 1px);
+    }
+
+    .category {
+        position: absolute;
+        bottom: 0;
+        left: $marginLeft;
+        right: 10px;
+        transition: opacity 0.2s ease;
+        opacity: 1;
+        font-weight: 700;
+
+        &:not(.viewed) {
+            opacity: 0;
+        }
+
+        div {
+            float: left;
+            text-align: center;
+            white-space: nowrap
+        }
+
+        .front {
+            width: 28%;
+            color: $colorFront;
+        }
+
+        .mobile {
+            width: 28%;
+            color: $colorMobile;
+        }
+
+        .backend {
+            width: 13%;
+            color: $colorBackend;
+        }
+
+        .lead {
+            width: 22%;
+            color: $colorDev;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .skill__chart {
+            left: $marginLeftTablet;
+        }
+
+        .category {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        padding: 0px 15px 30px;
+        height: auto;
+
+        .grid {
+            display: none;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        .skill__chart {
+            left: 0;
+            position: static;
+
+            .skill__chart-element {
+                float: none;
+                height: 50px;
+                width: 100% !important;
+                padding: 0 10px;
+                margin: 5px 0;
+
+                .fill {
+                    height: 100% !important;
+                    position: static;
+                    border-radius: 2px;
+                }
+
+                .text {
+                    font-size: 1.2rem;
+                    transform: none;
+                    position: absolute;
+                    z-index: 1;
+                    left: 20px;
+                    bottom: 10px;
+                }
+            }
+        }
+
+        .category {
+            left: 0;
+            display: none;
+        }
+
+        .skill__chart .skill__chart-element {
+            width: 6.6%;
+        }
+    }
+}

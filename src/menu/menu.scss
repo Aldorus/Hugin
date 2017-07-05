@@ -1,0 +1,169 @@
+@import "../values";
+
+.component__menu {
+    position: fixed;
+    z-index: 3;
+    width: 54px;
+    text-align: center;
+    padding-top: 15px;
+    color: $menuTextColor;
+
+    .menu__svg--open {
+        cursor: pointer;
+        color: $menuTextColorIcon;
+        transition: all 0.2s ease;
+        animation: apear 1s ease;
+
+        @keyframes apear {
+            from {
+                transform: translateX(-54px);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        svg {
+            fill: rgb(255, 255, 255);
+
+            rect {
+                transition: all 0.2s ease;
+            }
+        }
+
+        &:hover {
+            color: $colorPrimary;
+
+            svg {
+                fill: $colorPrimary;
+
+                rect:nth-child(3n+1), rect:nth-child(3n+3) {
+                    x: 4px;
+                }
+
+                rect:nth-child(3n+2) {
+                    x: 0px;
+                }
+            }
+        }
+    }
+
+    .menu {
+        background: $menuBackground;
+        position: fixed;
+        max-width: 370px;
+        width: 100%;
+        bottom: 0;
+        top: 0;
+        z-index: 1;
+        transform: translateX(calc(-100%));
+        transition: all 0.3s ease;
+        border-right: 1px solid rgba($colorPrimary, 0.6);
+
+        .menu__title {
+            font-size: 1.5rem;
+            margin: 50px 0 0 120px;
+            line-height: 1.2rem;
+            text-align: left;
+
+            &::after {
+                content: '';
+                clear: both;
+                display: block;
+            }
+        }
+
+        .menu__subtitle {
+            font-size: 1rem;
+            opacity: 0.7;
+        }
+
+        .menu__image--gravatar {
+            width: 80px;
+            float: left;
+            border-radius: 80px;
+            margin: 30px -30px 0 20px;
+        }
+
+        .meu__list {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 50px;
+            margin-top: 100px;
+
+            @media screen and (max-width: 768px) {
+                margin-top: 10px;
+            }
+
+            .menu__list--item {
+                font-size: 1.2rem;
+                padding: 20px 20px 17px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                width: 100%;
+
+                &:last-child {
+                    border-bottom: 0;
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: left;
+
+                    p {
+                        text-align: left;
+                        line-height: 1rem;
+
+                        .menu__anchor {
+                            font-size: 0.7rem;
+                            opacity: 0.7;
+                            white-space: nowrap;
+                        }
+                    }
+
+                    span {
+                        flex: 1;
+                        text-align: left;
+                        padding-left: 50px;
+                    }
+
+                    .fa {
+                        position: relative;
+                        top: -2px;
+                    }
+                }
+            }
+        }
+
+        .menu__svg--close {
+            color: $menuTextColor;
+            font-size: 2rem;
+            float: right;
+            margin: 15px 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+
+            &:hover {
+                color: $colorPrimary;
+            }
+        }
+    }
+
+    &.menu__open {
+        .menu__svg--open {
+            color: $menuTextColor;
+
+            svg {
+                fill: $menuTextColor;
+            }
+        }
+
+        .menu {
+            transform: translateX(000px);
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+@font-face {
+    font-family: CoffeeHouse;
+    src: url('/assets/fonts/CoffeeHouse.otf') format('opentype');
+}
+
+$colorBody: #292626;
+$background: #FFF;
+
+$colorPrimary: #9ac10e;
+$colorSecondary: #658E9C;
+$colorThird: #F1A208;
+
+$maxWidth: 1400px;
+
+// MENU
+$menuBackground: #292626;
+$menuTextColorIcon: #FFF;
+$menuTextColor: #FFF;
+
+// CONTACTS
+$contactsBackground: #000;
+$contactsTextColor: #FFF;
+
+// TRY
+$try1 : #9ac10e;
+$try4: #cadd25;
+$try2: black;
+$try3: #595b5a;
+$try5: white;
+
+$colorPrimary: $try1;
+$colorFront: #b8d450;
+$colorMobile: #797c7b;
+$colorBackend: #b8d450;
+$colorDev: #797c7b;
+
+$cursiveFont: 'Satisfy', cursive;
+$cursiveFont: 'Niconne', cursive;
+$cursiveFont: 'Parisienne', cursive;
+$cursiveFont: 'Mr Dafoe', cursive;
+
+$cursiveFont: CoffeeHouse;

@@ -1,0 +1,170 @@
+@import "values";
+
+html {
+    background: $background;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    color: $colorBody;
+    font-size: 16px;
+    line-height: 1.5;
+
+    &.effect__opacity {
+        overflow: hidden;
+    }
+
+    .effect__opactity--apply{
+        transition: all 0.2s ease;
+        background: rgba(255,255,255,0);
+        transform-origin: top right;
+        position: relative;
+        z-index: 2;
+    }
+
+    &.effect__opacity .effect__opactity--apply {
+        filter: brightness(0.4);
+        transform: scale(0.95, 0.95);
+        background: rgba(255, 255, 255, 1);
+        padding-bottom: 1000px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: $colorPrimary;
+    }
+}
+
+.component__skills h1, .component__projects h1 {
+    font-family: $cursiveFont;
+    font-size: 4rem;
+    color: #1F271B;
+
+}
+
+.hover-effect a {
+    padding: 50px 0;
+    text-decoration: none;
+    top: 0;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    display: inline-block;
+    height: 100%;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        bottom: 45px;
+        left: 50%;
+        content: "";
+        width: 0;
+        -webkit-transition: all .2s ease;
+        transition: all .2s ease;
+    }
+
+    &:hover, a:hover {
+        top: -10px;
+        color: $menuTextColor;
+
+        &::after {
+            border-bottom: 1px solid $menuTextColor;
+            width: 100%;
+            left: 0;
+        }
+    }
+
+}
+
+.screen, .screen__full-screen {
+    flex: 1;
+    margin: 0px 0px 0px 54px;
+
+    .screen__wrapper {
+        margin: auto;
+        height: 100%;
+        max-width: $maxWidth;
+    }
+}
+
+button {
+    -webkit-appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.screen {
+    padding: 20px 35px 50px;
+
+    h1 {
+        margin-bottom: 50px;
+        margin-top: 10px;
+    }
+}
+
+.screen__full-screen {
+    min-height: calc(100vh - 100px);
+}
+
+.scroll-down {
+    margin-top: 40px;
+    margin-bottom: 10px;
+
+    a {
+        display: inline-block;
+
+        &:hover {
+            color: $try4;
+        }
+    }
+
+    .scroll-down__text {
+        display: block;
+        margin-bottom: 0px;
+        font-family: $cursiveFont;
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+
+    .fa {
+        font-size: 2.2rem;
+        animation: animate-arrow 4s ease infinite;
+    }
+
+    @keyframes animate-arrow {
+        from {
+            transform: scale(1, 1.2) translateY(10px);
+        }
+
+        50% {
+            transform: scale(1.1, 1) translateY(0px);
+        }
+
+        to {
+            transform: scale(1, 1.2) translateY(10px);
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .screen h1 {
+        line-height: 3rem;
+        margin-top: 30px;
+    }
+}
+
+@import "home/home";
+@import "skills/skills";

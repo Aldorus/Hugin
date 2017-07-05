@@ -1,0 +1,31 @@
+@import "../values";
+
+.component__contacts {
+    background: $contactsBackground;
+    color: $contactsTextColor;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    transition: background 1s ease;
+
+    .contacts__links {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding-bottom: 35px;
+
+        .contacts__links--item  {
+            font-size: 1.5rem;
+            padding: 0 15px;
+        }
+
+        .contacts__link--resume {
+            font-size: 1.1rem;
+            padding-bottom: 15px;
+        }
+    }
+
+}
