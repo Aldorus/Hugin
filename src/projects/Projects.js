@@ -16,7 +16,7 @@ class Projects extends React.Component {
         {
             id: 'dashboard',
             label: 'Dataviz dashboard',
-            src: '/assets/projects/dataviz-2.png',
+            src: '/assets/projects/dataviz-2.jpg',
             description: 'B2b <strong>data visualisation</strong> project. With this dashboard our customer is able to easily see which element of his stock is not sold yet. He can focus to sell this available unit and has significantly increase his sell volume.',
             technologies: ['Angular', 'SASS', 'CucumberJS'],
             date: 'November 2015 - March 2016',
@@ -25,7 +25,7 @@ class Projects extends React.Component {
         {
             id: 'dashboard',
             label: 'Bot Alexa/Google Home',
-            src: '/assets/projects/shopping-assistant.png',
+            src: '/assets/projects/shopping-assistant.jpg',
             description: 'Few month ago, I started to work with this news technologies. <strong>Alexa</strong> and <strong>Google Home</strong> open lot of possibilities and will be, in few years, part of our daily habits.',
             technologies: ['React', 'NodeJS', 'Socket.io'],
             date: 'December 2016 - April 2017',
@@ -34,7 +34,7 @@ class Projects extends React.Component {
         {
             id: 'kiwapp',
             label: 'Kiwapp',
-            src: '/assets/projects/new-look.png',
+            src: '/assets/projects/new-look.jpg',
             description: 'Kiwapp is now a product edited by Ocito.<br/>It allow you to offer a personalized tablet to your customers and coworkers and display your product offers, helpful information, and entertainment. You can also show information and games to welcome your current customers.',
             technologies: ['Angular', 'SASS', 'PHP'],
             date: 'November 2013 - September 2015',
@@ -42,7 +42,7 @@ class Projects extends React.Component {
         {
             id: 'interface',
             label: 'Interface for bank customers',
-            src: '/assets/projects/ca.png',
+            src: '/assets/projects/ca.jpg',
             description: 'A specific project made with <strong>Kiwapp</strong> and available in many bank agencies. With this tool our client bring more satisfaction to his customer and is able to collect new information on them.',
             technologies: ['Angular', 'SASS', 'Kiwapp'],
             date: 'November 2013 - September 2015',
@@ -51,7 +51,7 @@ class Projects extends React.Component {
         {
             id: 'plateform',
             label: 'Ivanhoé Cambridge platform',
-            src: '/assets/projects/ivanhoe-cambridge.png',
+            src: '/assets/projects/ivanhoe-cambridge.jpg',
             description: 'This platform host all the 21 client\'s websites and is visited by more than <strong>1 million customers per month</strong>. Everything has been designed to answer efficiently to each website specificities without compromise the common backbone.',
             technologies: ['SASS', 'JQuery'],
             date: 'May 2016 - November 2016',
@@ -60,7 +60,7 @@ class Projects extends React.Component {
         {
             id: 'dashboard',
             label: 'Banking public application',
-            src: '/assets/projects/public-bank.png',
+            src: '/assets/projects/public-bank.jpg',
             description: 'Even few years later, one of my proudest work. An application downloaded more than 3 millions times. After the rebranding we have operated, we have increased the rating from less than 3 to almost 4 stars, on the <strong>Google play store</strong>.',
             technologies: ['Android'],
             date: 'October 2012 - October 2013',
