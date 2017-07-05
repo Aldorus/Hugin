@@ -6,8 +6,8 @@ class Sponsors extends React.Component {
         document.addEventListener('scroll', () => {
             if (document.body.scrollTop + screen.height > document.getElementById('sponsors').offsetTop) {
                 // Parallax effect
-                const parallaxValue = document.body.scrollTop + screen.height - document.getElementById('sponsors').offsetTop;
-                // document.getElementById('sponsors').style.backgroundPosition = 'center bottom +' + (parallaxValue / 4) + 'px';
+                // const parallaxValue = document.body.scrollTop + window.innerHeight - document.getElementById('sponsors').offsetTop;
+                // document.getElementById('sponsors').style.backgroundPosition = 'center top -' + (parallaxValue / 6) + 'px';
             }
         });
     };
