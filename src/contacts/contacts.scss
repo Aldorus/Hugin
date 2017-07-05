@@ -8,6 +8,7 @@
     bottom: 0;
     position: fixed;
     transition: background 1s ease;
+    z-index: 4;
 
     .contacts__links {
         height: 100%;
