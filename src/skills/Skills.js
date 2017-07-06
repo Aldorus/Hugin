@@ -1,19 +1,19 @@
 import React from 'react';
 
 class Skills extends React.Component {
-    componentDidMount() {
-        window.addEventListener('scroll', ()=> {
-            this.testSkillDisplayed();
-        })
-    }
 
-    testSkillDisplayed() {
-        let currentScroll = document.body.scrollTop;
+    testSkillDisplayer = () => {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
         if(currentScroll * 2 > document.getElementById('skills').offsetTop ) {
             document.getElementById('chart').classList.add('viewed');
             document.getElementById('grid').classList.add('viewed');
             document.getElementById('category').classList.add('viewed');
+            document.removeEventListener('scroll', this.testSkillDisplayer);
         }
+    };
+
+    componentDidMount() {
+        document.addEventListener('scroll', this.testSkillDisplayer);
     }
 
     render() {

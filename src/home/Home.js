@@ -4,9 +4,10 @@ class Home extends React.Component {
 
     componentWillMount = () => {
         document.addEventListener('scroll', () => {
-            if (document.body.scrollTop < screen.height + 200) {
-                document.getElementById('parallax-banner').style.backgroundPosition = 'left 0px bottom -' + (document.body.scrollTop / 2) + 'px';
-                document.getElementById('content-parallax-banner').style.opacity = 1 - (document.body.scrollTop / 100);
+            let scrollValue = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+            if (scrollValue < screen.height + 200) {
+                document.getElementById('parallax-banner').style.backgroundPosition = 'left 0px bottom -' + (scrollValue / 2) + 'px';
+                document.getElementById('content-parallax-banner').style.opacity = 1 - (scrollValue / 100);
             }
         });
     };
