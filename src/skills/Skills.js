@@ -5,15 +5,24 @@ class Skills extends React.Component {
     testSkillDisplayer = () => {
         let currentScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
         if(currentScroll * 2 > document.getElementById('skills').offsetTop ) {
-            document.getElementById('chart').classList.add('viewed');
-            document.getElementById('grid').classList.add('viewed');
-            document.getElementById('category').classList.add('viewed');
+            this.displayElement();
             document.removeEventListener('scroll', this.testSkillDisplayer);
         }
     };
 
+    displayElement = () => {
+        document.getElementById('chart').classList.add('viewed');
+        document.getElementById('grid').classList.add('viewed');
+        document.getElementById('category').classList.add('viewed');
+    };
+
     componentDidMount() {
-        document.addEventListener('scroll', this.testSkillDisplayer);
+        const test = /bot|google|baidu|bing|msn|duckduckgo|teoma|slurp|yandex/i.test(navigator.userAgent);
+        if (test) {
+            this.displayElement();
+        } else {
+            document.addEventListener('scroll', this.testSkillDisplayer);
+        }
     }
 
     render() {

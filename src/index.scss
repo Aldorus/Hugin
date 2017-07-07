@@ -166,5 +166,21 @@ button {
     }
 }
 
+.crawler {
+    .screen__full-screen {
+        height: 600px;
+        min-height: 600px;
+
+        .home__header {
+            height: 100% !important;
+        }
+    }
+
+    .component__skills.screen {
+        height: 600px !important;
+    }
+
+}
+
 @import "home/home";
 @import "skills/skills";

@@ -3,8 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.png">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description"
+              content="Portfolio javascript developer Guillaume. I work on cool stuff in TDD with React, Angular and Node."/>
+
+        <link rel="shortcut icon" href="/favicon.png">
         <!--
           Notice the use of %PUBLIC_URL% in the tag above.
           It will be replaced with the URL of the `public` folder during the build.
@@ -15,6 +18,16 @@
           Learn how to configure a non-root public URL by running `npm run build`.
         -->
         <title>Guillaume - Javascript Developer</title>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-25647384-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
     </head>
     <body>
         <div id="root"></div>
@@ -28,6 +41,5 @@
           To begin the development, run `npm start`.
           To create a production bundle, use `npm run build`.
         -->
-
     </body>
 </html>

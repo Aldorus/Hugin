@@ -2,14 +2,32 @@ import React from "react";
 
 class Home extends React.Component {
 
-    componentWillMount = () => {
-        document.addEventListener('scroll', () => {
-            let scrollValue = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-            if (scrollValue < screen.height + 200) {
-                document.getElementById('parallax-banner').style.backgroundPosition = 'left 0px bottom -' + (scrollValue / 2) + 'px';
-                document.getElementById('content-parallax-banner').style.opacity = 1 - (scrollValue / 100);
-            }
-        });
+
+    scrollChecker = () => {
+        console.log('check');
+        let scrollValue = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        if (scrollValue < screen.height + 200) {
+            document.getElementById('parallax-banner').style.backgroundPosition = 'left 0px bottom -' + (scrollValue / 2) + 'px';
+            document.getElementById('content-parallax-banner').style.opacity = 1 - (scrollValue / 100);
+        }
+    };
+
+    animLoog = () => {
+        requestAnimationFrame(this.animloop);
+        this.scrollChecker();
+    };
+
+    componentDidMount = () => {
+        (function animloop() {
+            setTimeout(() => {
+                requestAnimationFrame(animloop);
+                let scrollValue = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+                if (scrollValue < screen.height + 200) {
+                    document.getElementById('parallax-banner').style.backgroundPosition = 'left 0px bottom -' + (scrollValue / 2) + 'px';
+                    document.getElementById('content-parallax-banner').style.opacity = 1 - (scrollValue / 100);
+                }
+            }, 1);
+        })();
     };
 
     render() {
@@ -24,7 +42,8 @@ class Home extends React.Component {
 
                     <div className="screen__wrapper">
                         <div className="home__about-me">
-                            I coded my first website when I was 15 years old, I had long hair and no beard. A painful work
+                            I coded my first website when I was 15 years old, I had long hair and no beard. A painful
+                            work
                             with PHP for IE6 who take me several months to be done.
                             Now I have short hair and a short beard, I work on cool stuff like <strong>SPA
                             frameworks</strong> or <strong>NodeJS</strong> and I
