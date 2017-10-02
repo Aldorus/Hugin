@@ -6,11 +6,13 @@ import Projects from './projects/Projects';
 import Contacts from './contacts/Contacts';
 import Sponsors from './sponsors/Sponsors';
 import Footer from './common/Footer';
-import smoothScroll from "smooth-scroll";
+import SmoothScroll from "smooth-scroll";
 
 class App extends React.Component {
     componentDidMount() {
-        smoothScroll.init();
+        SmoothScroll('a[href*="#"][data-scroll]', {
+            offset: 150
+        });
     };
 
     render() {
