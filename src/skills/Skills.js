@@ -33,7 +33,12 @@ class Skills extends React.Component {
                     <div className="screen__inner-wrapper">
                         <div className="skill__chart" id="chart">
                             <div className="skill__chart-element">
-                                <div className="fill colorFront" style={{height: "85%"}}></div>
+                                <div className="fill colorFront" style={{height: "75%"}}></div>
+                                <div className="text"><span className="name ng-binding">React</span>
+                                </div>
+                            </div>
+                            <div className="skill__chart-element">
+                                <div className="fill colorFront" style={{height: "70%"}}></div>
                                 <div className="text"><span className="name ng-binding">React</span>
                                 </div>
                             </div>
@@ -53,7 +58,7 @@ class Skills extends React.Component {
                                 </div>
                             </div>
                             <div className="skill__chart-element">
-                                <div className="fill colorMobile" style={{height: "70%"}}></div>
+                                <div className="fill colorMobile" style={{height: "75%"}}></div>
                                 <div className="text"><span className="name ng-binding">Scrum</span>
                                 </div>
                             </div>
@@ -68,7 +73,7 @@ class Skills extends React.Component {
                                 </div>
                             </div>
                             <div className="skill__chart-element">
-                                <div className="fill colorMobile" style={{height: "75%"}}></div>
+                                <div className="fill colorMobile" style={{height: "85%"}}></div>
                                 <div className="text"><span className="name ng-binding">Architecture</span>
                                 </div>
                             </div>
@@ -83,12 +88,12 @@ class Skills extends React.Component {
                                 </div>
                             </div>
                             <div className="skill__chart-element">
-                                <div className="fill colorDev" style={{height: "90%"}}></div>
+                                <div className="fill colorDev" style={{height: "95%"}}></div>
                                 <div className="text"><span className="name ng-binding">Gulp - Webpack</span>
                                 </div>
                             </div>
                             <div className="skill__chart-element">
-                                <div className="fill colorDev" style={{height: "95%"}}></div>
+                                <div className="fill colorDev" style={{height: "100%"}}></div>
                                 <div className="text"><span className="name ng-binding">Git</span>
                                 </div>
                             </div>

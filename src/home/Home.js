@@ -1,10 +1,7 @@
 import React from "react";
 
 class Home extends React.Component {
-
-
     scrollChecker = () => {
-        console.log('check');
         let scrollValue = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
         if (scrollValue < screen.height + 200) {
             document.getElementById('parallax-banner').style.backgroundPosition = 'left 0px bottom -' + (scrollValue / 2) + 'px';

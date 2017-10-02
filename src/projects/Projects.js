@@ -103,18 +103,20 @@ class Projects extends React.Component {
                 <h2 className="project-item__title" onClick={() => this.openProject(`project-${index}`)}><span
                     className="project-item__prefix">0{index + 1}. </span>{project.label}</h2>
                 <div className="project-item__info">
-                    <div className="project-item__image-project"
-                         style={{backgroundImage: `url('${project.src}')`}}
-                         alt={`illustation ${project.label}`}></div>
-                    <div className="project-item__description">
-                        <h2>{project.label}</h2>
-                        <h3>{project.company}</h3>
-                        <span className="project-item__date">{project.date}</span>
-                        <div><p dangerouslySetInnerHTML={{__html: project.description}}></p></div>
-                        <ul className="project-item__techno-list">
-                            {project.technologies.map(this.renderTechno)}
-                        </ul>
-                        {this.renderCloseButton()}
+                    <div className="project-item__info__wrapper">
+                        <div className="project-item__image-project"
+                             style={{backgroundImage: `url('${project.src}')`}}
+                             alt={`illustation ${project.label}`}></div>
+                        <div className="project-item__description">
+                            <h2>{project.label}</h2>
+                            <h3>{project.company}</h3>
+                            <span className="project-item__date">{project.date}</span>
+                            <div><p dangerouslySetInnerHTML={{__html: project.description}}></p></div>
+                            <ul className="project-item__techno-list">
+                                {project.technologies.map(this.renderTechno)}
+                            </ul>
+                            {this.renderCloseButton()}
+                        </div>
                     </div>
                 </div>
             </article>
