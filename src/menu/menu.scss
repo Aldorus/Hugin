@@ -153,6 +153,16 @@
         }
     }
 
+    .menu__codewarsBanner {
+        position: absolute;
+        bottom: 0;
+        padding: 20px 50px;
+    }
+
+    .menu__codewarsBanner-image {
+        width: 100%;
+    }
+
     &.menu__open {
         .menu__svg--open {
             color: $menuTextColor;

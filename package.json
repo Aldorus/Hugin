@@ -1,6 +1,6 @@
 {
   "name": "Hugin",
-  "license": "WTFPL", 
+  "license": "WTFPL",
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
@@ -53,13 +53,17 @@
     "whatwg-fetch": "2.0.2"
   },
   "dependencies": {
+    "express": "^4.16.2",
     "font-awesome": "^4.7.0",
+    "http": "0.0.0",
+    "path": "^0.12.7",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
     "smooth-scroll": "github:cferdinandi/smooth-scroll"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "node app.js",
+    "serve": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
   },

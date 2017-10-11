@@ -1,7 +1,6 @@
 import React from 'react';
 
 class Skills extends React.Component {
-
     testSkillDisplayer = () => {
         let currentScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
         if(currentScroll * 2 > document.getElementById('skills').offsetTop ) {
@@ -39,7 +38,7 @@ class Skills extends React.Component {
                             </div>
                             <div className="skill__chart-element">
                                 <div className="fill colorFront" style={{height: "70%"}}></div>
-                                <div className="text"><span className="name ng-binding">React</span>
+                                <div className="text"><span className="name ng-binding">React Native</span>
                                 </div>
                             </div>
                             <div className="skill__chart-element">

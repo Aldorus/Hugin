@@ -2,16 +2,6 @@ import React from "react";
 import "./sponsors.scss";
 
 class Sponsors extends React.Component {
-    componentWillMount = () => {
-        document.addEventListener('scroll', () => {
-            if (document.body.scrollTop + screen.height > document.getElementById('sponsors').offsetTop) {
-                // Parallax effect
-                // const parallaxValue = document.body.scrollTop + window.innerHeight - document.getElementById('sponsors').offsetTop;
-                // document.getElementById('sponsors').style.backgroundPosition = 'center top -' + (parallaxValue / 6) + 'px';
-            }
-        });
-    };
-
     render() {
         return <div className="component__sponsors screen " id="sponsors">
             <div className="screen__wrapper">
@@ -19,7 +9,6 @@ class Sponsors extends React.Component {
                     <h1>I loved to work with them</h1>
                     <h2>Some companies I've been involved with</h2>
                 </div>
-
                 <ul>
                     <li><a href="https://valtech.ca/" target="_blank">
                         Valtech</a></li>

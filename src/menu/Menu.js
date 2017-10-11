@@ -3,7 +3,6 @@ import Close from "../common/Close";
 import "./menu.scss";
 
 class Menu extends React.Component {
-
     componentDidMount = () => {
         this.addListenerOnDocument();
     };
@@ -100,6 +99,9 @@ class Menu extends React.Component {
                         </a>
                     </li>
                 </ul>
+                {/*<div className="menu__codewarsBanner">*/}
+                    {/*<img className="menu__codewarsBanner-image" src="https://www.codewars.com/users/Aldorus/badges/large"/>*/}
+                {/*</div>*/}
             </div>
         </nav>;
     }
